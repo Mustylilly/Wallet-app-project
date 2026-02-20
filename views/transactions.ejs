@@ -1,0 +1,18 @@
+<div class="transactions">
+  <h3>Recent Transactions</h3>
+
+  <% if (transactions.length === 0) { %>
+    <p class="muted">No transactions yet</p>
+  <% } %>
+
+  <% transactions.forEach(tx => { %>
+    <div class="transaction">
+      <span>
+        <%= tx.type === "credit" ? "Received" : "Sent" %>
+      </span>
+      <span class="<%= tx.type %>">
+        ₦<%= tx.amount %>
+      </span>
+    </div>
+  <% }) %>
+</div>

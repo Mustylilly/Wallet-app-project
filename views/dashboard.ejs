@@ -1,0 +1,8 @@
+<%- include("partials/navbar") %>
+
+<div class="container">
+  <%- include("partials/balance-card", { balance }) %>
+  <%- include("partials/transactions", { transactions: [] }) %>
+</div>
+
+<%- include("partials/send-money-modal") %>

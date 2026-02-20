@@ -1,0 +1,32 @@
+<div id="sendModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Send Money</h2>
+
+    <form id="sendMoneyForm" method="POST" action="/wallet/send">
+      <label>Email</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="recipient@email.com"
+        required
+      />
+
+      <label>Amount (₦)</label>
+      <input
+        type="number"
+        name="amount"
+        min="1"
+        required
+      />
+
+      <div class="modal-actions">
+        <button type="button" id="closeModal" class="btn-outline">
+          Cancel
+        </button>
+        <button type="submit" class="btn-primary">
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

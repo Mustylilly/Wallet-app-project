@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Transaction PIN</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>🔒 Set Transaction PIN</h1>
+      
+      <% if(error){ %>
+        <p class="error-message"><%= error %></p>
+      <% } %>
+      <% if(success){ %>
+        <p class="success-message"><%= success %></p>
+      <% } %>
+
+      <form method="POST" action="/set-pin">
+        <input type="password" name="pin" placeholder="Enter 4-digit PIN" required pattern="\d{4}" maxlength="4" />
+        <input type="password" name="confirm_pin" placeholder="Confirm PIN" required pattern="\d{4}" maxlength="4" />
+        <button type="submit" class="btn">Set PIN</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
